@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour {
 
     void Awake() {
         instance = this;
-        curState = State.DrinkWater;
+        curState = State.Start;
     }
 
     public void NextState()
