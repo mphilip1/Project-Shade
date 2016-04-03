@@ -17,5 +17,10 @@ public class TestInteract : MonoBehaviour {
         {
             Debug.Log(item.Interact());
         }
+        else if (Input.GetMouseButtonDown(1))
+        {
+            GameManager.Instance.NextState();
+            Debug.Log("CURRENT STATE: " + GameManager.GetState());
+        }
 	}
 }

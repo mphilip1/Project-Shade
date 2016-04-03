@@ -274,6 +274,10 @@ Prefab:
       propertyPath: itemText.content.Array.data[0].text.Array.data[1]
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11421900, guid: 8ae17fba651c75244b2f586880a70343, type: 2}
+      propertyPath: itemText.content.Array.data[2].text.Array.data[0]
+      value: Hello
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ae17fba651c75244b2f586880a70343, type: 2}
   m_IsPrefabParent: 0

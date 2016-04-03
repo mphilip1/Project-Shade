@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
+
+using System;
 
 public class GameManager : MonoBehaviour {
 
@@ -19,6 +20,8 @@ public class GameManager : MonoBehaviour {
 
     private State curState;
 
+    public event Action<State> OnNewState;
+
     public static State GetState() {
         return Instance.curState;
     }
@@ -31,5 +34,6 @@ public class GameManager : MonoBehaviour {
     public void NextState()
     {
         curState++;
+        OnNewState(curState);
     }
 }

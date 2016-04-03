@@ -1,56 +1,87 @@
 ﻿using UnityEngine;
 
+using System;
+
 public class Item : MonoBehaviour {
 
     private int index = 0;
 
     [SerializeField]
-    [TextArea(2, 4)]
-    private string defaultText;
-    [SerializeField]
     private bool oneInteraction;
     [SerializeField]
     private ItemText itemText;
 
-    public bool CanInteract { get; private set; }
+    private bool canInteract;
 
-    public string CurText {
-        get
-        {
-            ItemText.Content content = itemText[GameManager.GetState()];
-            if (content.Count == 0)
-            {
-                return defaultText;
-            }
-            return itemText[GameManager.GetState()][index];
-        }
+    private ItemText.Content curContent;
+
+    #region Unity Methods
+    void OnEnable()
+    {
+        GameManager.Instance.OnNewState += OnNewState;
     }
 
-    public void IncrementText()
-    {        
-        ItemText.Content content = itemText[GameManager.GetState()];
+    void OnDisable()
+    {
+        GameManager.Instance.OnNewState -= OnNewState;
+    }
 
-        if (content.Count != 0)
+    void Start()
+    {
+        State state = GameManager.GetState();
+        curContent = itemText[state];
+        while (curContent.Count == 0 && state != 0)
+        {
+            state--;
+            curContent = itemText[state];
+        }
+        index = 0;
+        canInteract = true;
+    }
+    #endregion
+
+    public bool CanInteract()
+    {
+        return curContent.Count != 0 && canInteract;
+    }
+
+    public string Interact()
+    {
+        if (!CanInteract())
+        {
+            throw new NotImplementedException("The " + gameObject.name + " can not be interacted yet at this stage!");
+        }
+        string text = CurText;
+        IncrementText();
+        return text;
+    }
+
+    private string CurText { get { return curContent[index]; } }
+
+    private void IncrementText()
+    {
+        if (curContent.Count > 0)
         {
             index++;
-            if (index == content.Count)
+            if (index == curContent.Count)
             {
                 if (oneInteraction)
                 {
-                    CanInteract = false;
+                    canInteract = false;
                 }
                 index = 0;
             }
         }
     }
 
-    public string Interact()
+    private void OnNewState(State state)
     {
-        string text = CurText;
-        IncrementText();
-        return text;
+        ItemText.Content content = itemText[state];
+        if (content.Count > 0)
+        {
+            index = 0;
+            curContent = content;
+        }
     }
-
-    // On ChangeStateEvent, set index to 0
 	
 }
