@@ -1,13 +1,29 @@
 ﻿using UnityEngine;
-using System.Collections;
+
+using System;
 
 public class GameManager : MonoBehaviour {
 
     private static GameManager instance;
+    public static GameManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = new GameObject("Game Manager").AddComponent<GameManager>();
+            }
+
+            return instance;
+        }
+    }
+
     private State curState;
 
+    public event Action<State> OnNewState;
+
     public static State GetState() {
-        return instance.curState;
+        return Instance.curState;
     }
 
     public void PauseGame()
@@ -15,13 +31,9 @@ public class GameManager : MonoBehaviour {
         // TODO: Figure out how to pause the game
     }
 
-    void Awake() {
-        instance = this;
-        curState = State.DrinkWater;
-    }
-
     public void NextState()
     {
         curState++;
+        OnNewState(curState);
     }
 }
