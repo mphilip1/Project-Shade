@@ -38,6 +38,10 @@ ModelImporter:
     100060: Chair_003
     100062: Chair_004
     100064: Table
+    100066: Box
+    100068: Luggage
+    100070: Radio
+    100072: Travel_Book
     400000: //RootNode
     400002: Cube
     400004: Floor
@@ -71,6 +75,10 @@ ModelImporter:
     400060: Chair_003
     400062: Chair_004
     400064: Table
+    400066: Box
+    400068: Luggage
+    400070: Radio
+    400072: Travel_Book
     2300000: //RootNode
     2300002: Cube
     2300004: Floor
@@ -104,6 +112,10 @@ ModelImporter:
     2300060: Chair_003
     2300062: Chair_004
     2300064: Table
+    2300066: Box
+    2300068: Luggage
+    2300070: Radio
+    2300072: Travel_Book
     3300000: //RootNode
     3300002: Cube
     3300004: Floor
@@ -137,6 +149,10 @@ ModelImporter:
     3300060: Chair_003
     3300062: Chair_004
     3300064: Table
+    3300066: Box
+    3300068: Luggage
+    3300070: Radio
+    3300072: Travel_Book
     4300000: Floor
     4300002: Cube
     4300004: Kitchen_Cabinets
@@ -169,6 +185,10 @@ ModelImporter:
     4300058: Chair_001
     4300060: Table
     4300062: Chair
+    4300064: Travel_Book
+    4300066: Luggage
+    4300068: Radio
+    4300070: Box
     7400000: Default Take
     9500000: //RootNode
   materials:
