@@ -7,11 +7,11 @@ public class Item : MonoBehaviour {
     private int index = 0;
 
     [SerializeField]
-    private bool oneInteraction;
+    private bool nonRepeatableExamination;
     [SerializeField]
     private ItemText itemText;
 
-    private bool canInteract;
+    private bool canExamine;
 
     private ItemText.Content curContent;
 
@@ -36,18 +36,20 @@ public class Item : MonoBehaviour {
             curContent = itemText[state];
         }
         index = 0;
-        canInteract = true;
+        canExamine = true;
     }
     #endregion
 
-    public bool CanInteract()
+    // Returns true if you can examine the item
+    public bool CanExamine()
     {
-        return curContent.Count != 0 && canInteract;
+        return curContent.Count != 0 && canExamine;
     }
 
-    public string Interact()
+    // Returns a string giving a description for the item given the current state
+    public string Examine()
     {
-        if (!CanInteract())
+        if (!CanExamine())
         {
             throw new NotImplementedException("The " + gameObject.name + " can not be interacted yet at this stage!");
         }
@@ -65,9 +67,9 @@ public class Item : MonoBehaviour {
             index++;
             if (index == curContent.Count)
             {
-                if (oneInteraction)
+                if (nonRepeatableExamination)
                 {
-                    canInteract = false;
+                    canExamine = false;
                 }
                 index = 0;
             }

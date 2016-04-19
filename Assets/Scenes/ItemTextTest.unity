@@ -184,11 +184,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11421900, guid: 8ae17fba651c75244b2f586880a70343, type: 2}
       propertyPath: itemText.content.Array.data[1].text.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11421900, guid: 8ae17fba651c75244b2f586880a70343, type: 2}
       propertyPath: itemText.content.Array.data[3].text.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11421900, guid: 8ae17fba651c75244b2f586880a70343, type: 2}
       propertyPath: itemText.content.Array.data[2].text.Array.size
@@ -196,27 +196,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11421900, guid: 8ae17fba651c75244b2f586880a70343, type: 2}
       propertyPath: itemText.content.Array.data[4].text.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11421900, guid: 8ae17fba651c75244b2f586880a70343, type: 2}
       propertyPath: itemText.content.Array.data[5].text.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11421900, guid: 8ae17fba651c75244b2f586880a70343, type: 2}
       propertyPath: itemText.content.Array.data[6].text.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11421900, guid: 8ae17fba651c75244b2f586880a70343, type: 2}
       propertyPath: itemText.content.Array.data[7].text.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11421900, guid: 8ae17fba651c75244b2f586880a70343, type: 2}
       propertyPath: itemText.content.Array.data[8].text.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11421900, guid: 8ae17fba651c75244b2f586880a70343, type: 2}
       propertyPath: itemText.content.Array.data[0].text.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11421900, guid: 8ae17fba651c75244b2f586880a70343, type: 2}
       propertyPath: itemText.content.Array.data[1].texts.Array.size
@@ -264,7 +264,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11421900, guid: 8ae17fba651c75244b2f586880a70343, type: 2}
       propertyPath: itemText.content.Array.data[0].text.Array.data[0]
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11421900, guid: 8ae17fba651c75244b2f586880a70343, type: 2}
       propertyPath: defaultText

@@ -15,7 +15,10 @@ public class TestInteract : MonoBehaviour {
 	void Update () {
 	    if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log(item.Interact());
+            if (item.CanExamine())
+            {
+                Debug.Log(item.Examine());
+            }
         }
         else if (Input.GetMouseButtonDown(1))
         {
