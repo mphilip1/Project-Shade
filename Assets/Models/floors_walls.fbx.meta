@@ -1,0 +1,218 @@
+fileFormatVersion: 2
+guid: 30a891004a3e9844e80e704499412b3a
+timeCreated: 1461201375
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bathroom_Sink
+    100002: Bed
+    100004: Blinds
+    100006: Box
+    100008: Chair
+    100010: Chair.001
+    100012: Chair.002
+    100014: Chair.003
+    100016: Chair.004
+    100018: Computer
+    100020: Crackers
+    100022: Desk
+    100024: Floor
+    100026: //RootNode
+    100028: Fridge
+    100030: Kitchen Cabinets
+    100032: Kitchen_Counter
+    100034: Kitchen_Drawers
+    100036: Knob1
+    100038: Knob1.001
+    100040: Knob1.002
+    100042: Knob1.003
+    100044: Luggage
+    100046: Oven
+    100048: Plane
+    100050: Radio
+    100052: Sink
+    100054: Sink_hose
+    100056: Table
+    100058: Travel Book
+    400000: Bathroom_Sink
+    400002: Bed
+    400004: Blinds
+    400006: Box
+    400008: Chair
+    400010: Chair.001
+    400012: Chair.002
+    400014: Chair.003
+    400016: Chair.004
+    400018: Computer
+    400020: Crackers
+    400022: Desk
+    400024: Floor
+    400026: //RootNode
+    400028: Fridge
+    400030: Kitchen Cabinets
+    400032: Kitchen_Counter
+    400034: Kitchen_Drawers
+    400036: Knob1
+    400038: Knob1.001
+    400040: Knob1.002
+    400042: Knob1.003
+    400044: Luggage
+    400046: Oven
+    400048: Plane
+    400050: Radio
+    400052: Sink
+    400054: Sink_hose
+    400056: Table
+    400058: Travel Book
+    2300000: Bathroom_Sink
+    2300002: Bed
+    2300004: Blinds
+    2300006: Box
+    2300008: Chair
+    2300010: Chair.001
+    2300012: Chair.002
+    2300014: Chair.003
+    2300016: Chair.004
+    2300018: Computer
+    2300020: Crackers
+    2300022: Desk
+    2300024: Floor
+    2300026: Fridge
+    2300028: Kitchen Cabinets
+    2300030: Kitchen_Counter
+    2300032: Kitchen_Drawers
+    2300034: Knob1
+    2300036: Knob1.001
+    2300038: Knob1.002
+    2300040: Knob1.003
+    2300042: Luggage
+    2300044: Oven
+    2300046: Plane
+    2300048: Radio
+    2300050: Sink
+    2300052: Sink_hose
+    2300054: Table
+    2300056: Travel Book
+    3300000: Bathroom_Sink
+    3300002: Bed
+    3300004: Blinds
+    3300006: Box
+    3300008: Chair
+    3300010: Chair.001
+    3300012: Chair.002
+    3300014: Chair.003
+    3300016: Chair.004
+    3300018: Computer
+    3300020: Crackers
+    3300022: Desk
+    3300024: Floor
+    3300026: Fridge
+    3300028: Kitchen Cabinets
+    3300030: Kitchen_Counter
+    3300032: Kitchen_Drawers
+    3300034: Knob1
+    3300036: Knob1.001
+    3300038: Knob1.002
+    3300040: Knob1.003
+    3300042: Luggage
+    3300044: Oven
+    3300046: Plane
+    3300048: Radio
+    3300050: Sink
+    3300052: Sink_hose
+    3300054: Table
+    3300056: Travel Book
+    4300000: Travel Book
+    4300002: Luggage
+    4300004: Radio
+    4300006: Box
+    4300008: Chair.004
+    4300010: Chair.003
+    4300012: Chair.002
+    4300014: Chair.001
+    4300016: Table
+    4300018: Chair
+    4300020: Sink
+    4300022: Sink_hose
+    4300024: Kitchen_Drawers
+    4300026: Crackers
+    4300028: Computer
+    4300030: Fridge
+    4300032: Blinds
+    4300034: Plane
+    4300036: Bathroom_Sink
+    4300038: Bed
+    4300040: Desk
+    4300042: Kitchen Cabinets
+    4300044: Kitchen_Counter
+    4300046: Oven
+    4300048: Knob1.003
+    4300050: Knob1.002
+    4300052: Knob1.001
+    4300054: Knob1
+    4300056: Floor
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
