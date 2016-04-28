@@ -14,6 +14,7 @@ public class TurnToSand : MonoBehaviour {
 	void Update () {
 	    if (Input.GetKeyDown(KeyCode.E))
         {
+            print(gameObject.transform.position);
             gameObject.SetActive(false);
             sandSystem.Play();
             

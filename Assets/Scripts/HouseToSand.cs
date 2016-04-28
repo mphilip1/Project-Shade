@@ -6,6 +6,7 @@ public class HouseToSand : MonoBehaviour {
     public GameObject container;
     private Collider[] allColliders;
     public GameObject terrain;
+    public GameObject roof;
 
 	// Use this for initialization
 	void Start () {
@@ -39,6 +40,9 @@ public class HouseToSand : MonoBehaviour {
 
     public void fallDown()
     {
+        // Disable roof first for a better effect
+        roof.SetActive(false);
+        container.GetComponent<Rigidbody>().isKinematic = false;
         // Disable colliders to allow house to fall through floor
         for (int i = 0; i < allColliders.Length; i++)
         {
@@ -46,7 +50,7 @@ public class HouseToSand : MonoBehaviour {
         }
 
         // Enable rigidbody to apply gravity
-        container.GetComponent<Rigidbody>().isKinematic = false;
+        
         StartCoroutine(disableObjectsAfterSeconds(container, 1.5f));
     }
 }
