@@ -6,9 +6,14 @@ public class Highlight : MonoBehaviour {
 
 	public Shader highlight;
 	public Shader def;
-	public bool isHighlighted;
+	private bool isHighlighted;
 	public TextMesh hoverText;
 	Renderer rend;
+
+    public bool IsHighlighted {
+        get { return isHighlighted; }
+        set { isHighlighted = value; }
+    }
 
 	// Use this for initialization
 	void Start () {

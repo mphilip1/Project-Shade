@@ -21,7 +21,7 @@ public class LookAt : MonoBehaviour {
 		if(Physics.Raycast(this.transform.position, fwd, out hit, 4f)) {
 			GameObject go = hit.collider.gameObject;
 			if(go.GetComponent<Item>() != null && go.GetComponent<Item>().CanExamine() ) {
-				go.GetComponent<Highlight> ().isHighlighted = true;
+				go.GetComponent<Highlight> ().IsHighlighted = true;
 
 				if (Input.GetKeyDown (KeyCode.E)) {
 					messageBox.GetComponent<DisplayMessageBox> ().Interact (go.GetComponent<Item>().Examine());

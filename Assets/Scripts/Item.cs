@@ -2,6 +2,7 @@
 
 using System;
 
+[RequireComponent(typeof(Highlight))]
 public class Item : MonoBehaviour {
 
     private int index = 0;
