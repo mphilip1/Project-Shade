@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour {
     public void NextState()
     {
         curState++;
+		Debug.Log("CURRENT STATE: " + curState);
         OnNewState(curState);
     }
 }

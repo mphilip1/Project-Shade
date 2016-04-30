@@ -5,7 +5,7 @@ using System.Collections;
 public class DisplayMessageBox : MonoBehaviour {
 
 	public Text messageBoxText;
-	public float characterDelay = 0.1f;
+	private float characterDelay = 0.065f;
 
 	string message;
 

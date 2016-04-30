@@ -3,9 +3,12 @@
 using System;
 
 [RequireComponent(typeof(Highlight))]
+[RequireComponent(typeof(BoxCollider))]
 public class Item : MonoBehaviour {
 
     private int index = 0;
+
+	public State advanceState;
 
     [SerializeField]
     private bool nonRepeatableExamination;
@@ -73,6 +76,7 @@ public class Item : MonoBehaviour {
                 {
                     canExamine = false;
                 }
+				GameManager.Instance.NextState();
                 index = 0;
             }
         }
