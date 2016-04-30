@@ -12,7 +12,7 @@ public class TurnToSand : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if (Input.GetKeyDown(KeyCode.E))
+	    if (Input.GetKeyDown(KeyCode.P))
         {
             print(gameObject.transform.position);
             gameObject.SetActive(false);

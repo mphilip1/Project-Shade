@@ -39,11 +39,11 @@ namespace UnityStandardAssets.Utility
             Debug.Log("stopping " + name);
 
             // turn off emission
-            foreach (var system in systems)
+            /*foreach (var system in systems)
             {
                 var emission = system.emission;
                 emission.enabled = false;
-            }
+            }*/
             BroadcastMessage("Extinguish", SendMessageOptions.DontRequireReceiver);
 
             // wait for any remaining particles to expire

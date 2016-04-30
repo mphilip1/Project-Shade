@@ -50,6 +50,7 @@ public class Item : MonoBehaviour {
     // Returns a string giving a description for the item given the current state
     public string Examine()
     {
+		Debug.Log ("Examining!");
         if (!CanExamine())
         {
             throw new NotImplementedException("The " + gameObject.name + " can not be interacted yet at this stage!");
