@@ -48,7 +48,7 @@ public class HouseToSand : MonoBehaviour {
         {
             allColliders[i].enabled = false;
         }
-
+        Camera.main.GetComponent<EZCameraShake.CameraShaker>().ShakeOnce(10, 5, .1f, 3.5f);
         // Enable rigidbody to apply gravity
         
         StartCoroutine(disableObjectsAfterSeconds(container, 1.5f));
