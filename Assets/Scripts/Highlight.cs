@@ -32,7 +32,7 @@ public class Highlight : MonoBehaviour {
 		foreach(Renderer rend in gameObject.GetComponentsInChildren<Renderer>()) {
 			if (!rend.gameObject.CompareTag("HoverText")) {
 				rend.material.shader = on ? highlight : def;
-				hoverText.text = on ? "[e] Examine " + name : "";
+				//hoverText.text = on ? "[e] Examine " + name : "";
 				isHighlighted = on;
 			}
 		}

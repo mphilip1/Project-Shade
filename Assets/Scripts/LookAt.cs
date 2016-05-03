@@ -30,6 +30,7 @@ public class LookAt : MonoBehaviour {
 
 					if (Input.GetKeyDown (KeyCode.E)) {
 						messageBox.GetComponent<DisplayMessageBox> ().Interact (go.GetComponent<Item>().Examine());
+						GetComponentInParent<OVRPlayerController>().SetHaltUpdateMovement(true);
 					}
 				}
 			}

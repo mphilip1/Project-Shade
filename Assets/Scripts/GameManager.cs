@@ -4,6 +4,8 @@ using System;
 
 public class GameManager : MonoBehaviour {
 
+
+
     private static GameManager instance;
     public static GameManager Instance
     {
@@ -36,5 +38,14 @@ public class GameManager : MonoBehaviour {
         curState++;
 		Debug.Log("CURRENT STATE: " + curState);
         OnNewState(curState);
+		
+		if (curState.Equals(State.Finale)) {
+			GameObject.FindGameObjectWithTag("Environment").GetComponent<HouseToSand>().Play();
+		}
+
+
+
     }
+
+
 }

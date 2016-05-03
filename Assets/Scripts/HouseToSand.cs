@@ -14,14 +14,9 @@ public class HouseToSand : MonoBehaviour {
         
 
     }
-	
-	// Update is called once per frame
-	void Update () {
-	    if (Input.GetKeyDown(KeyCode.R))
-        {
-            StartCoroutine(enableAndWait(2));
-            
-        }
+
+	public void Play() {
+		StartCoroutine(enableAndWait(2));
 	}
 
     IEnumerator disableObjectsAfterSeconds(GameObject obj, float seconds)
@@ -48,7 +43,9 @@ public class HouseToSand : MonoBehaviour {
         {
             allColliders[i].enabled = false;
         }
-        Camera.main.GetComponent<EZCameraShake.CameraShaker>().ShakeOnce(10, 5, .1f, 3.5f);
+
+		//container.AddComponent<EZCameraShake.CameraShaker>().ShakeOnce(10, 5, .1f, 3.5f);
+        Camera.main.gameObject.AddComponent<EZCameraShake.CameraShaker>().ShakeOnce(10, 5, .1f, 3.5f);
         // Enable rigidbody to apply gravity
         
         StartCoroutine(disableObjectsAfterSeconds(container, 1.5f));

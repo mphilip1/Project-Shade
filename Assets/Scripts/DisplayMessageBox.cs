@@ -6,8 +6,14 @@ public class DisplayMessageBox : MonoBehaviour {
 
 	public Text messageBoxText;
 	private float characterDelay = 0.065f;
+	public GameObject playerController;
+	private OVRPlayerController ovrpc;
 
 	string message;
+
+	void Start() {
+		ovrpc = playerController.GetComponent<OVRPlayerController> ();
+	}
 
 	public void Interact (string messageIn) {
 		this.gameObject.SetActive (true);
@@ -29,6 +35,7 @@ public class DisplayMessageBox : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Return)) {
 			this.gameObject.SetActive (false);
+			ovrpc.SetHaltUpdateMovement(false);
 		}
 	}
 }
