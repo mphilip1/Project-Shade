@@ -24,15 +24,9 @@ public class WhiteboardController : MonoBehaviour {
 	[SerializeField]
 	private Toggle toggle4;
 
-	[SerializeField]
-	private Text text5;
-	[SerializeField]
-	private Toggle toggle5;
-
 	void OnEnable()
 	{
 		GameManager.Instance.OnNewState += OnFindingPlaneTickets;
-		GameManager.Instance.OnNewState += OnVacuuming;
 		GameManager.Instance.OnNewState += OnSnack;
 		GameManager.Instance.OnNewState += OnCloset;
 		GameManager.Instance.OnNewState += OnStove;
@@ -41,30 +35,25 @@ public class WhiteboardController : MonoBehaviour {
 	void OnDisable()
 	{
 		GameManager.Instance.OnNewState -= OnFindingPlaneTickets;
-		GameManager.Instance.OnNewState -= OnVacuuming;
 		GameManager.Instance.OnNewState -= OnSnack;
 		GameManager.Instance.OnNewState -= OnCloset;
 		GameManager.Instance.OnNewState -= OnStove;
 	}
 	
 	private void OnFindingPlaneTickets(State state) {
-		UpdateWhiteboard (State.PlaneTicket3, text, "Vacuum the floor", toggle);
-	}
-
-	private void OnVacuuming(State state) {
-		UpdateWhiteboard (State.Vacuum, text2, "Grab a snack", toggle2);
+		UpdateWhiteboard (State.PlaneTicket3, text, "Grab a snack", toggle);
 	}
 
 	private void OnSnack(State state) {
-		UpdateWhiteboard (State.Snack, text3, "Clean the closet", toggle3);
+		UpdateWhiteboard (State.Snack, text2, "Clean the closet", toggle2);
 	}
 
 	private void OnCloset(State state) {
-		UpdateWhiteboard (State.Closet, text4, "Turn off the stove", toggle4);
+		UpdateWhiteboard (State.Closet, text3, "Turn off the stove", toggle3);
 	}
 
 	private void OnStove(State state) {
-		UpdateWhiteboard (State.Stove, text5, "WHAT'S GOING ON!!!", toggle5);
+		UpdateWhiteboard (State.Stove, text4, "WHAT'S GOING ON!!!", toggle4);
 	}
 
 	private void UpdateWhiteboard(State state, Text text, string str, Toggle toggle) {

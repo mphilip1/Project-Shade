@@ -4,7 +4,6 @@ public enum State {
     PlaneTicket1,
     PlaneTicket2,
     PlaneTicket3,
-    Vacuum,
     Snack,
     Closet,
     Stove,

@@ -29,17 +29,25 @@ public class LookAt : MonoBehaviour {
 					go.GetComponent<Highlight> ().Highlighted = true;
 
 					if (Input.GetKeyDown (KeyCode.E)) {
-						messageBox.GetComponent<DisplayMessageBox> ().Interact (go.GetComponent<Item>().Examine());
+						messageBox.GetComponent<DisplayMessageBox> ().Interact (go.GetComponent<Item>());
 						GetComponentInParent<OVRPlayerController>().SetHaltUpdateMovement(true);
+					}
+				} else if (item.CanInteract ()) {
+					//highlight, check for input e, then turn to sand
+					go.GetComponent<Highlight> ().Highlighted = true;
+
+					if (Input.GetKeyDown (KeyCode.E)) {
+						//GREG turn to sand
+						TurnToSand toSand = go.GetComponent<TurnToSand>();
+						if (toSand != null) {
+							toSand.ToSand();
+						} else {
+							go.SetActive(false);
+							GameManager.Instance.HappyEnding = true;
+						}
 					}
 				}
 			}
 		}
-	}
-
-	void FixedUpdate () {
-
-	}
-	void LateUpdate() {
-	}
+	}	
 }

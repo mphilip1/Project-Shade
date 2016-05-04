@@ -8,6 +8,8 @@ public class DisplayMessageBox : MonoBehaviour {
 	private float characterDelay = 0.065f;
 	public GameObject playerController;
 	private OVRPlayerController ovrpc;
+	private bool talking;
+	private Item lastItem;
 
 	string message;
 
@@ -15,11 +17,13 @@ public class DisplayMessageBox : MonoBehaviour {
 		ovrpc = playerController.GetComponent<OVRPlayerController> ();
 	}
 
-	public void Interact (string messageIn) {
+	public void Interact (Item item) {
+		talking = true;
 		this.gameObject.SetActive (true);
-		this.message = messageIn;
+		this.message = item.Examine();
 		StopAllCoroutines ();
 		StartCoroutine (TypeMessage());
+		lastItem = item;
 	}
 
 	IEnumerator TypeMessage() {
@@ -33,9 +37,11 @@ public class DisplayMessageBox : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Return)) {
+		if (Input.GetKeyDown(KeyCode.E) && talking) {
 			this.gameObject.SetActive (false);
 			ovrpc.SetHaltUpdateMovement(false);
+			talking = false;
+			lastItem.IncrementText();
 		}
 	}
 }

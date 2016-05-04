@@ -14,6 +14,10 @@ public class Item : MonoBehaviour {
     private bool nonRepeatableExamination;
     [SerializeField]
     private ItemText itemText;
+	[SerializeField]
+	private State thresholdInteraction;
+	[SerializeField]
+	private bool notInteractable;
 
     private bool canExamine;
 
@@ -50,6 +54,13 @@ public class Item : MonoBehaviour {
         return curContent.Count != 0 && canExamine;
     }
 
+	public bool CanInteract() {
+		if (!notInteractable && GameManager.GetState () >= thresholdInteraction) {
+			return true;
+		}
+		return false;
+	}
+
     // Returns a string giving a description for the item given the current state
     public string Examine()
     {
@@ -58,14 +69,12 @@ public class Item : MonoBehaviour {
         {
             throw new NotImplementedException("The " + gameObject.name + " can not be interacted yet at this stage!");
         }
-        string text = CurText;
-        IncrementText();
-        return text;
+        return CurText;
     }
 
     private string CurText { get { return curContent[index]; } }
 
-    private void IncrementText()
+    public void IncrementText()
     {
         if (curContent.Count > 0)
         {

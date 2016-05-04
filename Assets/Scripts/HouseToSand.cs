@@ -16,7 +16,7 @@ public class HouseToSand : MonoBehaviour {
     }
 
 	public void Play() {
-		StartCoroutine(enableAndWait(2));
+		StartCoroutine(enableAndWait(25));
 	}
 
     IEnumerator disableObjectsAfterSeconds(GameObject obj, float seconds)

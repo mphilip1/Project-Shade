@@ -3,8 +3,7 @@
 using System;
 
 public class GameManager : MonoBehaviour {
-
-
+	
 
     private static GameManager instance;
     public static GameManager Instance
@@ -21,8 +20,13 @@ public class GameManager : MonoBehaviour {
     }
 
     private State curState;
+	public bool HappyEnding { get; set; }
 
     public event Action<State> OnNewState;
+
+	void Start() {
+		HappyEnding = false;
+	}
 
     public static State GetState() {
         return Instance.curState;
@@ -38,7 +42,39 @@ public class GameManager : MonoBehaviour {
         curState++;
 		Debug.Log("CURRENT STATE: " + curState);
         OnNewState(curState);
-		
+
+
+//		if (curState.Equals (State.Start)) {
+//			// Play first ad
+//		}
+//		if (curState.Equals (State.PlaneTicket1)) {
+//			// Play helicopter sound quietly for a little while
+//			// Change plant
+//
+//
+//
+//		}
+//		if (curState.Equals (State.Vacuum)) {
+//			// Add sand to floor
+//			//Play next radio ad
+//			// Change plant back to 1st plant
+//		}
+//
+//		if (curState.Equals (State.Snack)) {
+//			// Add sand to the ground in the kitchen
+//			// Make box of crackers appear
+//			// If crackers are examined, turn them to sand
+//			// Play new radio ad
+//		}
+//		if (curState.Equals (State.Closet)) {
+//			// Turn door to sand
+//			//
+//		}
+//		if (curState.Equals (State.Stove)) {
+//			// Turn stove to sand
+//			// Turn rest of the kitchen to sand if the player wants to
+//		}
+
 		if (curState.Equals(State.Finale)) {
 			GameObject.FindGameObjectWithTag("Environment").GetComponent<HouseToSand>().Play();
 		}
