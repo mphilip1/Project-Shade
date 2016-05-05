@@ -35,5 +35,9 @@ public class FPSController : MonoBehaviour {
         {
             transform.Rotate(turnSpeed * Time.deltaTime * Vector3.up);
         }
+		if (Input.GetKey(KeyCode.Escape))
+		{
+			Application.Quit();
+		}
     }
 }
