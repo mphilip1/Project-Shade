@@ -20,7 +20,7 @@ public class LookAt : MonoBehaviour {
 		RaycastHit hit;
 		Vector3 fwd = this.transform.TransformDirection (Vector3.forward);
 
-		if(Physics.Raycast(this.transform.position, fwd, out hit, 6f)) {
+		if(Physics.SphereCast(this.transform.position, 0.25f, fwd, out hit, 6f)) {
 			//Debug.Log ("raycast hit: " + hit.collider.gameObject.name);
 			GameObject go = hit.collider.gameObject;
 			Item item = go.GetComponent<Item>();
@@ -42,6 +42,7 @@ public class LookAt : MonoBehaviour {
 						//GREG turn to sand
 						TurnToSand toSand = go.GetComponent<TurnToSand>();
 						if (toSand != null) {
+							GameManager.Instance.NextState ();
 							toSand.ToSand();
 						} else if (go.CompareTag("Phone Charger")){
 							//phone charger packed

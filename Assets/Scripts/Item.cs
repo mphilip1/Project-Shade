@@ -54,7 +54,8 @@ public class Item : MonoBehaviour {
     // Returns true if you can examine the item
     public bool CanExamine()
     {
-        return curContent.Count != 0 && canExamine;
+														//state is past plane ticket 3 and you're looking at a hiding spot
+		return curContent.Count != 0 && canExamine && !(GameManager.GetState () > State.PlaneTicket3 && this.CompareTag("Troll"));
     }
 
 	public bool CanInteract() {

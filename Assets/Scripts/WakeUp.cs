@@ -33,7 +33,7 @@ public class WakeUp : MonoBehaviour {
 		hoverText.text = "";
 		//anim.Play("GetUpFromBed");
 		transform.position = new Vector3 (-26.96f, 4.61f, -10.06f);
-		transform.rotation = Quaternion.Euler (0, 180, 0);
+		transform.rotation = Quaternion.Euler (0, 135, 0);
 		yield return new WaitForSeconds (seconds);
 		anim.enabled = false;
 		pc.enabled = true;
