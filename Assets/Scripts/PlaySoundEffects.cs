@@ -33,19 +33,14 @@ public class PlaySoundEffects : MonoBehaviour {
 			} else { //happy
 				audioSource.clip = clips[2];
 			}
-			audioSource.Play();
+			StartCoroutine(PlayDelayedAudio());
 
 
 		} 
 	}
 
-	IEnumerator ReduceAudioSound() {
-		float timer = clips[0].length;
-
-		while (timer > 0) {
-			timer -= Time.deltaTime;
-			audioSource.volume -= Time.deltaTime/5;
-			yield return null;
-		}
+	IEnumerator PlayDelayedAudio() {
+		yield return new WaitForSeconds (23);
+		audioSource.Play ();
 	}
 }

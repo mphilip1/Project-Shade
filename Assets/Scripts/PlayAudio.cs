@@ -36,7 +36,12 @@ public class PlayAudio : MonoBehaviour {
 				//helicopter comes and goes, screen fades to black
 				audioSource.clip = clips[3];
 			}
-			audioSource.Play();
+			StartCoroutine(PlayDelayedAudio());
 		} 
+	}
+
+	IEnumerator PlayDelayedAudio() {
+		yield return new WaitForSeconds (20);
+		audioSource.Play ();
 	}
 }

@@ -25,6 +25,7 @@ public class WakeUp : MonoBehaviour {
 			Debug.Log("WE DID IT");
 			fade.enabled = true;
 			StartCoroutine(PlayWakeUp(1.5f));
+			GameManager.Instance.NextState();
 		}
 	}
 
