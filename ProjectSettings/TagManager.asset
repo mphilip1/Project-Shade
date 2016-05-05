@@ -6,6 +6,7 @@ TagManager:
   tags:
   - HoverText
   - Environment
+  - Phone Charger
   layers:
   - Default
   - TransparentFX

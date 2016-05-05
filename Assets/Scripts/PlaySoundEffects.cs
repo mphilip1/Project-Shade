@@ -24,17 +24,16 @@ public class PlaySoundEffects : MonoBehaviour {
 	void OnNewState(State state) {
 		if (state == State.PlaneTicket1) {
 			audioSource.clip = clips[0];
-			audioSource.volume = .25f;
 			audioSource.Play();
 		} else if (state == State.Finale) {
-			audioSource.Play();
-			if (!GameManager.Instance.HappyEnding) {
-				Debug.Log ("Not happy");
-			} else {
-				audioSource.volume = 1;
 
-				Debug.Log("Happy");
+			// sad
+			if (!GameManager.Instance.HappyEnding) {
+				audioSource.clip = clips[1];
+			} else { //happy
+				audioSource.clip = clips[2];
 			}
+			audioSource.Play();
 
 
 		} 

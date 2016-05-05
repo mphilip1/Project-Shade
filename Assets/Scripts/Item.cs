@@ -23,6 +23,9 @@ public class Item : MonoBehaviour {
 
     private ItemText.Content curContent;
 
+	[SerializeField]
+	private bool dontAdvanceState;
+
     #region Unity Methods
     void OnEnable()
     {
@@ -72,6 +75,8 @@ public class Item : MonoBehaviour {
         return CurText;
     }
 
+	public bool DontAdvanceState { get {return dontAdvanceState;} }
+
     private string CurText { get { return curContent[index]; } }
 
     public void IncrementText()
@@ -85,7 +90,9 @@ public class Item : MonoBehaviour {
                 {
                     canExamine = false;
                 }
-				GameManager.Instance.NextState();
+				if (!this.dontAdvanceState) {
+					GameManager.Instance.NextState(); 
+				}
                 index = 0;
             }
         }

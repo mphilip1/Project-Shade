@@ -4,6 +4,7 @@ using System.Collections;
 
 public class DisplayMessageBox : MonoBehaviour {
 
+	public Text eToContinue;
 	public Text messageBoxText;
 	private float characterDelay = 0.065f;
 	public GameObject playerController;
@@ -33,6 +34,8 @@ public class DisplayMessageBox : MonoBehaviour {
 			yield return new WaitForSeconds (characterDelay);
 			messageBoxText.text += c;
 		}
+
+		eToContinue.gameObject.SetActive (true);
 	}
 
 	// Update is called once per frame
@@ -40,6 +43,7 @@ public class DisplayMessageBox : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.E) && talking) {
 			this.gameObject.SetActive (false);
 			ovrpc.SetHaltUpdateMovement(false);
+			eToContinue.gameObject.SetActive (false);
 			talking = false;
 			lastItem.IncrementText();
 		}

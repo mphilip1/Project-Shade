@@ -29,15 +29,14 @@ public class PlayAudio : MonoBehaviour {
 			audioSource.clip = clips[2];
 			audioSource.Play();
 		} else if (state == State.Finale) {
-			audioSource.clip = clips[3];
-			audioSource.Play();
 			if (GameManager.Instance.HappyEnding) {
 				//helicopter gets louder, good ending radio audio plays, screen fades to black
-
+				audioSource.clip = clips[4];
 			} else {
 				//helicopter comes and goes, screen fades to black
-
+				audioSource.clip = clips[3];
 			}
+			audioSource.Play();
 		} 
 	}
 }

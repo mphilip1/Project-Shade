@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour {
 
 	void Start() {
 		HappyEnding = false;
+		print (curState);
 	}
 
     public static State GetState() {

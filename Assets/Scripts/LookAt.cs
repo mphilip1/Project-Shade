@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class LookAt : MonoBehaviour {
 
 	public GameObject messageBox;
+	public AudioSource radioSource;
+	public AudioClip phoneChargerClip;
 
 	// Use this for initialization
 	void Start () {
@@ -41,9 +43,12 @@ public class LookAt : MonoBehaviour {
 						TurnToSand toSand = go.GetComponent<TurnToSand>();
 						if (toSand != null) {
 							toSand.ToSand();
-						} else {
+						} else if (go.CompareTag("Phone Charger")){
+							//phone charger packed
 							go.SetActive(false);
 							GameManager.Instance.HappyEnding = true;
+							radioSource.clip = phoneChargerClip;
+							radioSource.Play ();
 						}
 					}
 				}
